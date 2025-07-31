@@ -1,6 +1,6 @@
 // components/services/LeaseLine.jsx
 import React from 'react';
-import { FiServer, FiShield, FiBarChart, FiGlobe, FiUpload, FiDownload } from 'react-icons/fi';
+import { FiServer, FiShield, FiBarChart, FiGlobe, FiUpload } from 'react-icons/fi';
 
 const LeaseLine = () => {
   const features = [

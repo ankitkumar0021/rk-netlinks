@@ -1,6 +1,6 @@
 // components/services/Comparison.jsx
 import React from 'react';
-import { FiHome, FiUser, FiBriefcase, FiZap, FiDollarSign, FiShield } from 'react-icons/fi';
+import { FiHome, FiUser, FiBriefcase, FiZap } from 'react-icons/fi';
 
 const ServiceComparison = () => {
   const services = [

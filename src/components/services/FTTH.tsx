@@ -1,6 +1,6 @@
 // components/services/FTTH.jsx
 import React from 'react';
-import { FiWifi, FiZap, FiDownload, FiUpload, FiPlay, FiTv } from 'react-icons/fi';
+import { FiWifi, FiZap, FiDownload, FiPlay, FiTv } from 'react-icons/fi';
 
 const FTTH = () => {
   const features = [
