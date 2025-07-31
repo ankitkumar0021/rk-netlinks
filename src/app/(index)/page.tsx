@@ -1,7 +1,6 @@
-// pages/index.js
-import Banner from '@/components/homepage/Banner';
-import Coverage from '@/components/homepage/Coverage';
-import MissionVision from '@/components/homepage/MissionVision';
+import CTA from '@/components/homepage/CTA';
+import Features from '@/components/homepage/Features';
+import Hero from '@/components/homepage/Hero';
 import Pricing from '@/components/homepage/Pricing';
 import Services from '@/components/homepage/Services';
 import Testimonials from '@/components/homepage/Testimonials';
@@ -11,12 +10,13 @@ const Home = () => {
   return (
     <div className="min-h-screen flex flex-col">
       <main>
-        <Banner />
+        {/* <Banner /> */}
+        <Hero />
         <Services />
         <Pricing />
-        <MissionVision />
-        <Coverage />
-        <Testimonials />
+        <Features />
+        <Testimonials /> 
+        <CTA />
       </main>
     </div>
   );
