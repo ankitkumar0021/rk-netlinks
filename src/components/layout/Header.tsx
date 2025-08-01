@@ -5,7 +5,7 @@ import { FiMenu, FiX, FiPhone, FiWifi } from 'react-icons/fi';
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
   const navItems = [
-    { name: 'Home', href: '#' },
+    { name: 'Home', href: '/' },
     { name: 'About Us', href: '/about' },
     { name: 'Services', href: '/services' },
     { name: 'Contact Us', href: '/contact' },
