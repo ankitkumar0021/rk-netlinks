@@ -1,6 +1,6 @@
 // components/contact/SupportTeam.jsx
 import React from 'react';
-import { FiPhone, FiMail, FiMessageSquare } from 'react-icons/fi';
+import { FiPhone, FiMail } from 'react-icons/fi';
 
 const SupportTeam = () => {
   const supportOptions = [
@@ -18,13 +18,13 @@ const SupportTeam = () => {
       details: "support@rknetlinks.com",
       action: "Send Email"
     },
-    {
-      icon: <FiMessageSquare className="text-3xl text-indigo-600" />,
-      title: "Live Chat",
-      description: "Instant messaging support through our website",
-      details: "Available 24/7",
-      action: "Start Chat"
-    }
+    // {
+    //   icon: <FiMessageSquare className="text-3xl text-indigo-600" />,
+    //   title: "Live Chat",
+    //   description: "Instant messaging support through our website",
+    //   details: "Available 24/7",
+    //   action: "Start Chat"
+    // }
   ];
 
   return (

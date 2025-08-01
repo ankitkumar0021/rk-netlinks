@@ -1,4 +1,5 @@
 // components/Hero.jsx
+import Image from 'next/image';
 import React from 'react';
 import { FiWifi, FiChevronRight } from 'react-icons/fi';
 
@@ -10,7 +11,7 @@ const Hero = () => {
           <div className="space-y-6">
             <div className="inline-flex items-center space-x-3 bg-white text-blue-600 px-5 py-2 rounded-full shadow-sm">
               <FiWifi className="text-xl" />
-              <span className="font-medium">Enabling Bandwidth for More</span>
+              {/* <span className="font-medium">Enabling Bandwidth for More</span> */}
             </div>
             
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-800 leading-tight">
@@ -33,7 +34,15 @@ const Hero = () => {
           </div>
           
           <div className="relative">
-            <div className="bg-gradient-to-r from-blue-500 to-purple-500 rounded-2xl w-full h-80 lg:h-96"></div>
+            <div className='w-auto h-80 lg:h-96'>
+              <Image
+              src="/images/banner.avif"
+              alt="Banner"
+              className="w-full h-full object-cover rounded-2xl"
+              height={1000}
+              width={1000}
+            />
+            </div>
             <div className="absolute -bottom-6 -right-6 bg-white rounded-xl shadow-lg p-6 w-64">
               <div className="flex items-center">
                 <div className="bg-blue-100 p-3 rounded-lg mr-4">

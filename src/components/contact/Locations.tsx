@@ -11,20 +11,20 @@ const Locations = () => {
       email: "bangalore@rknetlinks.com",
       hours: "Mon-Fri: 9AM - 6PM, Sat: 10AM - 4PM"
     },
-    {
-      city: "Mumbai",
-      address: "456 Business Tower, Bandra Kurla Complex, Mumbai 400051",
-      phone: "+91 22 2345 6789",
-      email: "mumbai@rknetlinks.com",
-      hours: "Mon-Fri: 9AM - 6PM, Sat: 10AM - 4PM"
-    },
-    {
-      city: "Delhi",
-      address: "789 Corporate Plaza, Connaught Place, New Delhi 110001",
-      phone: "+91 11 3456 7890",
-      email: "delhi@rknetlinks.com",
-      hours: "Mon-Fri: 9AM - 6PM, Sat: 10AM - 4PM"
-    }
+    // {
+    //   city: "Mumbai",
+    //   address: "456 Business Tower, Bandra Kurla Complex, Mumbai 400051",
+    //   phone: "+91 22 2345 6789",
+    //   email: "mumbai@rknetlinks.com",
+    //   hours: "Mon-Fri: 9AM - 6PM, Sat: 10AM - 4PM"
+    // },
+    // {
+    //   city: "Delhi",
+    //   address: "789 Corporate Plaza, Connaught Place, New Delhi 110001",
+    //   phone: "+91 11 3456 7890",
+    //   email: "delhi@rknetlinks.com",
+    //   hours: "Mon-Fri: 9AM - 6PM, Sat: 10AM - 4PM"
+    // }
   ];
 
   return (

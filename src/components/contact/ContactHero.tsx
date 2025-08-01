@@ -42,7 +42,7 @@ const ContactHero = () => {
                 </div>
                 <div>
                   <h3 className="text-lg font-bold text-gray-800">Email Us</h3>
-                  <p className="text-gray-600">support@ynettelecom.com</p>
+                  <p className="text-gray-600">support@rknetlinks.com</p>
                 </div>
               </div>
               

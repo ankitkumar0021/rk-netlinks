@@ -1,6 +1,6 @@
 // components/services/Support.jsx
 import React from 'react';
-import { FiPhone, FiMessageSquare, FiTool, FiClock } from 'react-icons/fi';
+import { FiPhone, FiTool, FiClock } from 'react-icons/fi';
 
 const Support = () => {
   const supportOptions = [
@@ -10,12 +10,12 @@ const Support = () => {
       description: "Immediate assistance from our technical experts",
       contact: "+91 98765 43210"
     },
-    {
-      icon: <FiMessageSquare className="text-3xl text-purple-600" />,
-      title: "Live Chat",
-      description: "Instant messaging support through our website",
-      contact: "Chat Now"
-    },
+    // {
+    //   icon: <FiMessageSquare className="text-3xl text-purple-600" />,
+    //   title: "Live Chat",
+    //   description: "Instant messaging support through our website",
+    //   contact: "Chat Now"
+    // },
     {
       icon: <FiTool className="text-3xl text-indigo-600" />,
       title: "On-Site Support",
