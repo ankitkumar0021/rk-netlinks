@@ -1,4 +1,5 @@
 'use client'
+import Image from 'next/image';
 import React, { useState } from 'react';
 import { FiMenu, FiX, FiPhone, FiWifi } from 'react-icons/fi';
 
@@ -15,13 +16,12 @@ const Header = () => {
     <header className="bg-white shadow-sm fixed w-full z-50">
       <div className="custom_container_space">
         <div className="flex justify-between items-center py-4">
-          {/* Logo */}
-          <div className="flex items-center space-x-2">
-            <div className="bg-gradient-to-r from-blue-600 to-purple-600 p-2 rounded-lg">
-              <FiWifi className="text-white text-2xl" />
+            {/* Logo */}
+            <div className="flex items-center space-x-2 w-28 h-20 overflow-hidden">
+            <div>
+              <img src="/images/logo.png" alt="RK Netlinks Logo" className="w-full h-full object-cover" />
             </div>
-            <h1 className="text-2xl font-bold text-gray-800"><span className="text-blue-600">RK</span> Netlinks</h1>
-          </div>
+        </div>
 
           {/* Desktop Navigation */}
           <nav className="hidden lg:flex items-center space-x-8">
