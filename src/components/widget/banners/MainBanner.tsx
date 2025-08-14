@@ -12,9 +12,9 @@ import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
 import ImageComponent from "@/components/ui/ImageComponent";
 
 const banners = [
-  { id: 1, image: "/images/2.jpg", link: "#", alt: "Banner 2" },
-  { id: 2, image: "/images/b2.jpg", link: "#", alt: "Banner 2" },
-  { id: 3, image: "/images/b1.jpg", link: "#", alt: "Banner 2" },
+  { id: 1, image: "/images/b4.jpg", link: "#", alt: "Banner 2" },
+  { id: 2, image: "/images/b5.jpg", link: "#", alt: "Banner 2" },
+  { id: 3, image: "/images/b6.jpg", link: "#", alt: "Banner 2" },
 ];
 
 export default function MainBanner() {
@@ -47,7 +47,7 @@ export default function MainBanner() {
         >
           {banners.map((banner) => (
             <SwiperSlide key={banner.id}>
-              <div className="relative w-full h-[260px] sm:h-[360px] md:h-[520px] lg:h-[72vh] overflow-hidden">
+              <div className="relative w-full h-[260px] sm:h-[360px] md:h-[520px] lg:h-[100vh] overflow-hidden">
                 <Link href={banner.link} className="relative block w-full h-full" aria-label={`Open ${banner.alt}`}>
                   <ImageComponent url={banner.image} img_title={banner.alt} object_cover={true} />
                   <div className="absolute inset-0 pointer-events-none bg-gradient-to-t from-black/30 via-transparent to-black/10" />
@@ -56,8 +56,6 @@ export default function MainBanner() {
             </SwiperSlide>
           ))}
         </Swiper>
-
-        {/* Optional pagination placement */}
         <div className="absolute bottom-4 left-1/2 -translate-x-1/2 z-20" />
       </div>
     </div>

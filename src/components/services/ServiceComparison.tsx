@@ -1,5 +1,5 @@
 import React from 'react';
-import { FiHome, FiUser, FiBriefcase, FiZap } from 'react-icons/fi';
+import { FiHome, FiUser, FiBriefcase, FiZap, FiCheckCircle } from 'react-icons/fi';
 
 const ServiceComparison = () => {
   const services = [
@@ -50,44 +50,44 @@ const ServiceComparison = () => {
               key={index} 
               className="group bg-white rounded-xl overflow-hidden shadow-md hover:shadow-2xl transform hover:-translate-y-2 transition-all duration-300 border border-gray-200"
             >
-              <div className="p-8 text-center flex flex-col h-full">
+              <div className="p-8 flex flex-col items-center h-full">
                 
                 {/* Icon */}
-                <div className="mb-5 flex justify-center">{service.icon}</div>
+                <div className="mb-5">{service.icon}</div>
                 
                 {/* Name */}
                 <h3 className="text-2xl font-bold text-gray-900 mb-2">{service.name}</h3>
                 
                 {/* Speed */}
-                <div className="flex items-center justify-center text-gray-800 font-medium mb-4">
+                <div className="flex items-center text-gray-800 font-medium mb-4">
                   <FiZap className="mr-2 text-yellow-500" />
                   <span>{service.speed}</span>
                 </div>
                 
                 {/* Best For */}
-                <div className="mb-6">
+                <div className="mb-6 text-center">
                   <div className="text-sm text-gray-500">Best for</div>
                   <div className="font-medium text-gray-800">{service.bestFor}</div>
                 </div>
                 
                 {/* Price */}
-                <div className="mb-6">
+                <div className="mb-6 text-center">
                   <div className="text-sm text-gray-500">Price Range</div>
                   <div className="font-bold text-lg text-gray-900">{service.price}</div>
                 </div>
                 
                 {/* Features */}
-                <ul className="space-y-3 mb-8 text-left">
+                <ul className="space-y-3 mb-8 max-w-xs">
                   {service.features.map((feature, i) => (
-                    <li key={i} className="flex items-start">
-                      <div className="flex-shrink-0 w-5 h-5 bg-green-100 text-green-600 rounded-full flex items-center justify-center mr-2 mt-1">✓</div>
-                      <span className="text-gray-700">{feature}</span>
+                    <li key={i} className="flex items-center">
+                      <FiCheckCircle className="flex-shrink-0 w-5 h-5 text-green-600 mr-2" />
+                      <span className="text-gray-700 text-left">{feature}</span>
                     </li>
                   ))}
                 </ul>
                 
                 {/* Button */}
-                <button className="w-full py-3 rounded-lg font-bold transition-all duration-300 border border-gray-300 hover:bg-gray-100 text-gray-800">
+                <button className="w-full max-w-xs py-3 rounded-lg font-bold transition-all duration-300 border border-gray-300 hover:bg-gray-100 text-gray-800">
                   {service.name === "Lease Line" ? "Contact Sales" : "View Plans"}
                 </button>
               </div>

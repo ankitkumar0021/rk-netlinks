@@ -6,8 +6,8 @@ const LeaseLine = () => {
   const features = [
     { icon: <FiBarChart className="text-2xl text-indigo-600" />, title: "Dedicated Bandwidth", description: "Guaranteed speeds not shared with other users" },
     { icon: <FiShield className="text-2xl text-indigo-600" />, title: "SLA Guarantee", description: "99.9% uptime with service level agreements" },
-    { icon: <FiGlobe className="text-2xl text-indigo-600" />, title: "Symmetrical Speeds", description: "Equal upload and download speeds" },
-    { icon: <FiUpload className="text-2xl text-indigo-600" />, title: "Priority Support", description: "24/7 dedicated technical assistance" }
+    { icon: <FiUpload className="text-2xl text-indigo-600" />, title: "Priority Support", description: "24/7 dedicated technical assistance" },
+    { icon: <FiGlobe className="text-2xl text-indigo-600" />, title: "Global Connectivity", description: "Seamless connectivity to global offices and cloud services" }
   ];
 
   return (
@@ -80,18 +80,6 @@ const LeaseLine = () => {
                   </div>
                 </div>
               ))}
-            </div>
-            
-            <div className="mt-8 p-6 bg-indigo-50 rounded-xl">
-              <div className="flex items-center">
-                <FiGlobe className="text-indigo-600 text-2xl mr-3" />
-                <div>
-                  <h4 className="font-bold text-gray-800 mb-1">Global Connectivity</h4>
-                  <p className="text-gray-600">
-                    Seamless connectivity to global offices and cloud services
-                  </p>
-                </div>
-              </div>
             </div>
           </div>
         </div>
