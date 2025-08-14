@@ -4,13 +4,14 @@ import Hero from '@/components/homepage/Hero';
 import Pricing from '@/components/homepage/Pricing';
 import Services from '@/components/homepage/Services';
 import Testimonials from '@/components/homepage/Testimonials';
+import MainBanner from '@/components/widget/banners/MainBanner';
 import React from 'react';
 
 const Home = () => {
   return (
     <div className="min-h-screen flex flex-col">
       <main>
-        {/* <Banner /> */}
+        <MainBanner />
         <Hero />
         <Services />
         <Pricing />

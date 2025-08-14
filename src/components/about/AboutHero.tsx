@@ -1,10 +1,11 @@
 // components/about/Hero.jsx
+import Image from 'next/image';
 import React from 'react';
-import { FiGlobe, FiTarget } from 'react-icons/fi';
+import { FiTarget } from 'react-icons/fi';
 
 const AboutHero = () => {
   return (
-    <section className="pt-28 pb-20 bg-gradient-to-br from-blue-50 to-purple-50">
+    <section className="pt-28 md:pb-20 bg-gradient-to-br from-blue-50 to-purple-50">
       <div className="custom_container_padding">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div className="space-y-6">
@@ -40,12 +41,14 @@ const AboutHero = () => {
           </div>
           
           <div className="relative">
-            <div className="bg-gradient-to-r from-blue-500 to-purple-500 rounded-2xl w-full h-80 lg:h-96 flex items-center justify-center">
-              <div className="text-center p-6">
-                <FiGlobe className="text-white text-5xl mx-auto mb-4" />
-                <h3 className="text-2xl font-bold text-white">Enabling Bandwidth for More</h3>
-                <p className="text-white/90 mt-2">Our vision since 2010</p>
-              </div>
+            <div className='w-auto h-80 lg:h-96'>
+              <Image
+              src="/images/about.jpg"
+              alt="Banner"
+              className="w-full h-full object-cover rounded-2xl"
+              height={1000}
+              width={1000}
+            />
             </div>
           </div>
         </div>

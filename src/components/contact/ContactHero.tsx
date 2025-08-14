@@ -1,10 +1,9 @@
-// components/contact/Hero.jsx
 import React from 'react';
 import { FiMail, FiPhone, FiMessageSquare } from 'react-icons/fi';
 
 const ContactHero = () => {
   return (
-    <section className="pt-28 pb-20 bg-gradient-to-br from-blue-50 to-purple-50">
+    <section className="pt-28 md:pb-20 bg-gradient-to-br from-blue-50 to-purple-50">
       <div className="custom_container_padding">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div className="space-y-6">
@@ -70,7 +69,7 @@ const ContactHero = () => {
                   <input 
                     type="text" 
                     id="name" 
-                    className="w-full px-4 py-3 bg-gray-50 rounded-lg border border-gray-200 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                    className="w-full px-4 py-3 bg-gray-50 rounded-lg border border-gray-200 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent placeholder-gray-500 text-gray-800"
                     placeholder="Enter your name"
                   />
                 </div>
@@ -80,7 +79,7 @@ const ContactHero = () => {
                   <input 
                     type="email" 
                     id="email" 
-                    className="w-full px-4 py-3 bg-gray-50 rounded-lg border border-gray-200 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                    className="w-full px-4 py-3 bg-gray-50 rounded-lg border border-gray-200 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent placeholder-gray-500 text-gray-800"
                     placeholder="Enter your email"
                   />
                 </div>
@@ -92,7 +91,7 @@ const ContactHero = () => {
                   <input 
                     type="tel" 
                     id="phone" 
-                    className="w-full px-4 py-3 bg-gray-50 rounded-lg border border-gray-200 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                    className="w-full px-4 py-3 bg-gray-50 rounded-lg border border-gray-200 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent placeholder-gray-500 text-gray-800"
                     placeholder="Enter your phone number"
                   />
                 </div>
@@ -101,9 +100,9 @@ const ContactHero = () => {
                   <label htmlFor="subject" className="block text-gray-700 mb-2">Subject</label>
                   <select 
                     id="subject" 
-                    className="w-full px-4 py-3 bg-gray-50 rounded-lg border border-gray-200 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                    className="w-full px-4 py-3 bg-gray-50 rounded-lg border border-gray-200 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent text-gray-800"
                   >
-                    <option value="">Select a subject</option>
+                    <option value="" disabled selected className="text-gray-500">Select a subject</option>
                     <option value="sales">Sales Inquiry</option>
                     <option value="support">Technical Support</option>
                     <option value="billing">Billing Question</option>
@@ -117,8 +116,7 @@ const ContactHero = () => {
                 <label htmlFor="message" className="block text-gray-700 mb-2">Your Message</label>
                 <textarea 
                   id="message" 
-                //   rows="5"
-                  className="w-full px-4 py-3 bg-gray-50 rounded-lg border border-gray-200 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                  className="w-full px-4 py-3 bg-gray-50 rounded-lg border border-gray-200 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent placeholder-gray-500 text-gray-800"
                   placeholder="How can we help you?"
                 ></textarea>
               </div>

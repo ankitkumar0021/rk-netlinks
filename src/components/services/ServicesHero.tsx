@@ -4,7 +4,7 @@ import { FiWifi, FiZap, FiServer } from 'react-icons/fi';
 
 const ServicesHero = () => {
   return (
-    <section className="pt-28 pb-20 bg-gradient-to-br from-blue-50 to-purple-50">
+    <section className="pt-28 md:pb-20 bg-gradient-to-br from-blue-50 to-purple-50">
       <div className="custom_container_padding">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div className="space-y-6">

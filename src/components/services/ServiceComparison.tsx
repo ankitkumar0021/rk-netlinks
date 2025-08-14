@@ -1,4 +1,3 @@
-// components/services/Comparison.jsx
 import React from 'react';
 import { FiHome, FiUser, FiBriefcase, FiZap } from 'react-icons/fi';
 
@@ -6,7 +5,7 @@ const ServiceComparison = () => {
   const services = [
     {
       name: "FTTH",
-      icon: <FiHome className="text-3xl text-blue-600" />,
+      icon: <FiHome className="text-4xl text-blue-600 transition-transform duration-300 group-hover:scale-110" />,
       speed: "Up to 1 Gbps",
       bestFor: "Homes, Heavy Streaming",
       price: "₹750 - ₹2000/month",
@@ -14,7 +13,7 @@ const ServiceComparison = () => {
     },
     {
       name: "Broadband",
-      icon: <FiUser className="text-3xl text-purple-600" />,
+      icon: <FiUser className="text-4xl text-purple-600 transition-transform duration-300 group-hover:scale-110" />,
       speed: "Up to 100 Mbps",
       bestFor: "Individuals, Families",
       price: "₹500 - ₹1500/month",
@@ -22,7 +21,7 @@ const ServiceComparison = () => {
     },
     {
       name: "Lease Line",
-      icon: <FiBriefcase className="text-3xl text-indigo-600" />,
+      icon: <FiBriefcase className="text-4xl text-indigo-600 transition-transform duration-300 group-hover:scale-110" />,
       speed: "Up to 10 Gbps",
       bestFor: "Businesses, Enterprises",
       price: "Custom Pricing",
@@ -33,56 +32,62 @@ const ServiceComparison = () => {
   return (
     <section className="py-20 bg-gradient-to-br from-blue-50 to-purple-50">
       <div className="custom_container_padding">
+        
+        {/* Section Heading */}
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
+          <h2 className="text-3xl md:text-4xl font-extrabold text-gray-900 mb-4">
             Service Comparison
           </h2>
-          <p className="text-xl text-gray-600">
+          <p className="text-lg md:text-xl text-gray-700">
             Find the perfect internet solution for your needs
           </p>
         </div>
         
+        {/* Service Cards */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {services.map((service, index) => (
             <div 
               key={index} 
-              className={`common_border bg-white rounded-xl overflow-hidden ${
-                service.name === "Lease Line" ? 'transform md:-translate-y-4 ring-2 ring-indigo-500' : ''
-              }`}
+              className="group bg-white rounded-xl overflow-hidden shadow-md hover:shadow-2xl transform hover:-translate-y-2 transition-all duration-300 border border-gray-200"
             >
-              <div className="p-8 text-center">
-                <div className="mb-5">{service.icon}</div>
-                <h3 className="text-2xl font-bold text-gray-800 mb-2">{service.name}</h3>
+              <div className="p-8 text-center flex flex-col h-full">
                 
-                <div className="flex items-center justify-center text-gray-600 mb-4">
-                  <FiZap className="mr-2" />
+                {/* Icon */}
+                <div className="mb-5 flex justify-center">{service.icon}</div>
+                
+                {/* Name */}
+                <h3 className="text-2xl font-bold text-gray-900 mb-2">{service.name}</h3>
+                
+                {/* Speed */}
+                <div className="flex items-center justify-center text-gray-800 font-medium mb-4">
+                  <FiZap className="mr-2 text-yellow-500" />
                   <span>{service.speed}</span>
                 </div>
                 
+                {/* Best For */}
                 <div className="mb-6">
                   <div className="text-sm text-gray-500">Best for</div>
-                  <div className="font-medium">{service.bestFor}</div>
+                  <div className="font-medium text-gray-800">{service.bestFor}</div>
                 </div>
                 
+                {/* Price */}
                 <div className="mb-6">
                   <div className="text-sm text-gray-500">Price Range</div>
-                  <div className="font-bold text-lg">{service.price}</div>
+                  <div className="font-bold text-lg text-gray-900">{service.price}</div>
                 </div>
                 
+                {/* Features */}
                 <ul className="space-y-3 mb-8 text-left">
                   {service.features.map((feature, i) => (
                     <li key={i} className="flex items-start">
-                      <div className="text-green-500 mr-2 mt-1">✓</div>
-                      <span>{feature}</span>
+                      <div className="flex-shrink-0 w-5 h-5 bg-green-100 text-green-600 rounded-full flex items-center justify-center mr-2 mt-1">✓</div>
+                      <span className="text-gray-700">{feature}</span>
                     </li>
                   ))}
                 </ul>
                 
-                <button className={`w-full py-3 rounded-lg font-bold transition-colors ${
-                  service.name === "Lease Line" 
-                    ? 'bg-gradient-to-r from-indigo-600 to-blue-600 text-white' 
-                    : 'common_border hover:bg-gray-50'
-                }`}>
+                {/* Button */}
+                <button className="w-full py-3 rounded-lg font-bold transition-all duration-300 border border-gray-300 hover:bg-gray-100 text-gray-800">
                   {service.name === "Lease Line" ? "Contact Sales" : "View Plans"}
                 </button>
               </div>

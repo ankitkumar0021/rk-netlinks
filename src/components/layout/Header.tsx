@@ -17,7 +17,7 @@ const Header = () => {
       <div className="custom_container_space">
         <div className="flex justify-between items-center py-4">
             {/* Logo */}
-            <div className="flex items-center space-x-2 w-28 h-20 overflow-hidden">
+            <div className="flex items-center space-x-2 w-24 h-12 overflow-hidden">
             <div>
               <img src="/images/logo.png" alt="RK Netlinks Logo" className="w-full h-full object-cover" />
             </div>
