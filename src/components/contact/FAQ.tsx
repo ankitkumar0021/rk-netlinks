@@ -1,5 +1,6 @@
 // components/contact/FAQ.jsx
 'use client'
+import Link from 'next/link';
 import React, { useState } from 'react';
 import { FiChevronDown, FiChevronUp } from 'react-icons/fi';
 
@@ -80,9 +81,9 @@ const FAQ = () => {
           <p className="text-xl text-gray-600 mb-6">
             Still have questions? Our support team is ready to help.
           </p>
-          <button className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-bold py-3 px-8 rounded-lg transition-all">
+          <Link href="/contact" className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-bold py-3 px-8 rounded-lg transition-all">
             Contact Support
-          </button>
+          </Link>
         </div>
       </div>
     </section>

@@ -1,7 +1,6 @@
 'use client'
-import Image from 'next/image';
 import React, { useState } from 'react';
-import { FiMenu, FiX, FiPhone, FiWifi } from 'react-icons/fi';
+import { FiMenu, FiX, FiPhone } from 'react-icons/fi';
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -30,9 +29,12 @@ const Header = () => {
                 {item.name}
               </a>
             ))}
-            <button className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-medium px-6 py-2 rounded-lg transition-all flex items-center">
-              <FiPhone className="mr-2" /> Call us
-            </button>
+            <a href="tel:+911234567890">
+              <button className="w-full bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-medium px-6 py-2 rounded-lg transition-all flex items-center justify-center cursor-pointer">
+                <FiPhone className="mr-2" /> Call us
+              </button>
+            </a>
+
           </nav>
 
           {/* Mobile Menu Button */}
@@ -49,9 +51,11 @@ const Header = () => {
                 {item.name}
               </a>
             ))}
-            <button className="w-full bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-medium px-6 py-2 rounded-lg transition-all flex items-center justify-center">
-              <FiPhone className="mr-2" /> Call us
-            </button>
+            <a href="tel:+911234567890">
+              <button className="w-full bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-medium px-6 py-2 rounded-lg transition-all flex items-center justify-center cursor-pointer">
+                <FiPhone className="mr-2" /> Call us
+              </button>
+            </a>
           </nav>
         )}
       </div>

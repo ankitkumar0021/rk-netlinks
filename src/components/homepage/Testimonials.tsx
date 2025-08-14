@@ -12,7 +12,7 @@ const Testimonials = () => {
       rating: 5
     },
     {
-      name: "Priya Sharma",
+      name: "Priya Chauhan",
       role: "Small Business Owner",
       content: "As a small business owner, reliable internet is crucial. RK Netlinks's business plan has eliminated our connectivity issues and improved our productivity significantly.",
       rating: 5

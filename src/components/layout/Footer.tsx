@@ -1,10 +1,18 @@
 // components/Footer.jsx
+import Link from 'next/link';
 import React from 'react';
 import { 
   FiMapPin, FiPhone, FiMail, FiClock, 
   FiFacebook, FiTwitter, FiInstagram, FiLinkedin,
   FiWifi
 } from 'react-icons/fi';
+
+ const links = [
+    { label: "Home", href: "/" },
+    { label: "Services", href: "/services" },
+    { label: "About Us", href: "/about" },
+    { label: "Contact Us", href: "/contact" }
+  ];
 
 const Footer = () => {
   return (
@@ -44,17 +52,20 @@ const Footer = () => {
 
           {/* Quick Links */}
           <div>
-            <h3 className="text-xl font-bold text-white mb-4">Quick Links</h3>
-            <ul className="space-y-2">
-              {['Home', 'Services', 'Plans', 'Coverage', 'Support', 'About Us'].map((item) => (
-                <li key={item}>
-                  <a href="#" className="text-gray-300 hover:text-blue-400 transition-colors">
-                    {item}
-                  </a>
-                </li>
-              ))}
-            </ul>
-          </div>
+      <h3 className="text-xl font-bold text-white mb-4">Quick Links</h3>
+      <ul className="space-y-2">
+        {links.map((link) => (
+          <li key={link.label}>
+            <Link
+              href={link.href}
+              className="text-gray-300 hover:text-blue-400 transition-colors"
+            >
+              {link.label}
+            </Link>
+          </li>
+        ))}
+      </ul>
+    </div>
           
           {/* Services */}
           <div>
@@ -99,11 +110,11 @@ const Footer = () => {
           <p className="text-gray-400">
             &copy; {new Date().getFullYear()} RK Netlinks Solutions. All rights reserved.
           </p>
-          <div className="flex justify-center space-x-6 mt-2">
+          {/* <div className="flex justify-center space-x-6 mt-2">
             <a href="#" className="text-gray-400 hover:text-blue-400 transition-colors">Privacy Policy</a>
             <a href="#" className="text-gray-400 hover:text-blue-400 transition-colors">Terms of Service</a>
             <a href="#" className="text-gray-400 hover:text-blue-400 transition-colors">Sitemap</a>
-          </div>
+          </div> */}
         </div>
       </div>
     </footer>
