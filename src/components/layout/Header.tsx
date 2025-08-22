@@ -1,6 +1,8 @@
 'use client'
+import Link from 'next/link';
 import React, { useState } from 'react';
 import { FiMenu, FiX, FiPhone } from 'react-icons/fi';
+import ImageComponent from '../ui/ImageComponent';
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -16,11 +18,11 @@ const Header = () => {
       <div className="custom_container_space">
         <div className="flex justify-between items-center py-4">
             {/* Logo */}
-            <div className="flex items-center space-x-2 w-24 h-12 overflow-hidden">
-            <div>
-              <img src="/images/logo.png" alt="RK Netlinks Logo" className="w-full h-full object-cover" />
+            <div className="flex items-center space-x-2 w-28 h-12 overflow-hidden">
+              <Link href={`/`} className="relative block w-full h-full" aria-label={`Open ${`RK Netlinks`}`}>
+                  <ImageComponent url={`/images/logo.png`} img_title={`logo`} object_cover={true} />
+              </Link>
             </div>
-        </div>
 
           {/* Desktop Navigation */}
           <nav className="hidden lg:flex items-center space-x-8">

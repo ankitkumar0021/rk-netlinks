@@ -76,15 +76,46 @@
 
 
 
-
+import Image from 'next/image';
 import React from 'react';
-import { FaWifi, FaBolt, FaServer, FaCogs, FaCheck } from 'react-icons/fa';
+import { FaCheck } from 'react-icons/fa';
 
+// Mock image URLs - replace with your actual image paths
 const services = [
-  { icon: <FaWifi className="h-6 w-6" />, title: 'FTTH Services', subtitle: 'Home Fiber', description: 'Gigabit fiber straight to your door — ideal for UHD streaming, gaming and smart homes.', features: ['Symmetrical speeds', '99.99% uptime', 'Professional installation'], price: '₹499/mo', tag: 'Popular' },
-  { icon: <FaBolt className="h-6 w-6" />, title: 'Broadband Services', subtitle: 'Flexible Plans', description: 'Affordable plans with burstable bandwidth for families and light businesses.', features: ['Easy upgrades', 'No long-term lock-in', 'Free modem'], price: '₹399/mo' },
-  { icon: <FaServer className="h-6 w-6" />, title: 'Lease Line Services', subtitle: 'Dedicated Link', description: 'Dedicated circuits for enterprises needing guaranteed bandwidth and low jitter.', features: ['SLA-backed', 'Static IPs', '24/7 NOC'], price: 'Contact', tag: 'Enterprise' },
-  { icon: <FaCogs className="h-6 w-6" />, title: 'Managed Wi-Fi Solutions', subtitle: 'Business Wi‑Fi', description: 'End-to-end Wi‑Fi with analytics, captive portals and seamless roaming.', features: ['Cloud management', 'Guest portals', 'Bandwidth shaping'], price: 'From ₹1,999' }
+  { 
+    image: '/images/ftth.jpg', 
+    title: 'FTTH Services', 
+    subtitle: 'Home Fiber', 
+    description: 'Gigabit fiber straight to your door — ideal for UHD streaming, gaming and smart homes.', 
+    features: ['Symmetrical speeds', '99.99% uptime', 'Professional installation'], 
+    price: '₹499/mo', 
+    tag: 'Popular' 
+  },
+  { 
+    image: '/images/broadband.jpg', 
+    title: 'Broadband Services', 
+    subtitle: 'Flexible Plans', 
+    description: 'Affordable plans with burstable bandwidth for families and light businesses.', 
+    features: ['Easy upgrades', 'No long-term lock-in', 'Free modem'], 
+    price: '₹399/mo' 
+  },
+  { 
+    image: '/images/leased.jpg', 
+    title: 'Lease Line Services', 
+    subtitle: 'Dedicated Link', 
+    description: 'Dedicated circuits for enterprises needing guaranteed bandwidth and low jitter.', 
+    features: ['SLA-backed', 'Static IPs', '24/7 NOC'], 
+    price: 'Contact', 
+    tag: 'Enterprise' 
+  },
+  { 
+    image: '/images/wifi.jpg', 
+    title: 'Managed Wi-Fi Solutions', 
+    subtitle: 'Business Wi‑Fi', 
+    description: 'End-to-end Wi‑Fi with analytics, captive portals and seamless roaming.', 
+    features: ['Cloud management', 'Guest portals', 'Bandwidth shaping'], 
+    price: 'From ₹1,999' 
+  }
 ];
 
 export default function ServicesUnique() {
@@ -98,11 +129,17 @@ export default function ServicesUnique() {
 
         <div className="space-y-8">
           {services.map((s, idx) => (
-            <article key={idx} className={`grid grid-cols-1 lg:grid-cols-12 gap-6 items-center group rounded-2xl overflow-hidden border border-gray-100 ${idx % 2 === 0 ? 'lg:bg-white' : 'lg:bg-gradient-to-r lg:from-indigo-50 lg:to-white'}`}>
-              {/* Icon column */}
+            <article key={idx} className={`grid grid-cols-1 lg:grid-cols-12 gap-6 items-center group rounded-2xl overflow-hidden border border-gray-300 ${idx % 2 === 0 ? 'lg:bg-white' : 'lg:bg-gradient-to-r lg:from-indigo-50 lg:to-white'}`}>
+              {/* Image column */}
               <div className={`lg:col-span-3 flex items-center justify-center p-6 ${idx % 2 === 0 ? 'bg-white' : 'bg-transparent'}`}>
-                <div className={`relative flex items-center justify-center rounded-full w-28 h-28 shadow-md transform transition-transform duration-300 group-hover:scale-105 ${idx % 2 === 0 ? 'bg-gradient-to-br from-blue-50 to-indigo-50' : 'bg-gradient-to-br from-indigo-50 to-blue-50'}`}>
-                  <div className="text-indigo-600">{s.icon}</div>
+                <div className={`relative flex items-center justify-center rounded-xl md:rounded-full w-full h-full md:w-32 md:h-32 shadow-md transform transition-transform duration-300 group-hover:scale-105 overflow-hidden ${idx % 2 === 0 ? 'bg-gradient-to-br from-blue-50 to-indigo-50' : 'bg-gradient-to-br from-indigo-50 to-blue-50'}`}>
+                  <Image 
+                    src={s.image} 
+                    alt={s.title}
+                    className="w-full h-full object-cover"
+                    height={1000}
+                    width={1000}
+                  />
                   {/* floating decorative dot */}
                   <span className="absolute -right-3 -top-3 inline-flex h-3 w-3 rounded-full bg-indigo-500 ring-2 ring-white" aria-hidden></span>
                 </div>
@@ -112,9 +149,9 @@ export default function ServicesUnique() {
               <div className={`lg:col-span-9 p-6 ${idx % 2 === 0 ? 'text-left' : 'text-left lg:pl-10'}`}>
                 <div className="flex items-start gap-4">
                   <div className="flex-1">
-                    <div className="flex items-center gap-3">
+                    <div className="flex items-center gap-3 flex-wrap">
                       <h3 className="text-2xl font-semibold text-gray-900">{s.title}</h3>
-                      {s.tag && <span className="ml-2 inline-flex items-center rounded-full bg-indigo-100 text-indigo-700 text-xs font-medium px-2 py-1">{s.tag}</span>}
+                      {s.tag && <span className="inline-flex items-center rounded-full bg-indigo-100 text-indigo-700 text-xs font-medium px-2 py-1">{s.tag}</span>}
                       <span className="ml-auto text-sm font-semibold text-gray-700">{s.price}</span>
                     </div>
                     <p className="text-sm text-gray-500 mt-2">{s.description}</p>
@@ -137,4 +174,3 @@ export default function ServicesUnique() {
     </section>
   );
 }
-
