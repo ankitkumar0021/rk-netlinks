@@ -1,4 +1,5 @@
 // components/services/CTA.jsx
+import Link from 'next/link';
 import React from 'react';
 import { FiPhone, FiWifi } from 'react-icons/fi';
 
@@ -25,9 +26,7 @@ const ServicesCTA = () => {
             <button className="bg-white text-blue-600 hover:bg-gray-100 font-bold py-4 px-8 rounded-lg text-lg transition-colors flex items-center">
               <FiPhone className="mr-2" /> Call Now: +91 98765 43210
             </button>
-            <button className="bg-transparent border-2 border-white text-white hover:bg-white/10 font-bold py-4 px-8 rounded-lg text-lg transition-colors">
-              View All Plans
-            </button>
+           
           </div>
         </div>
       </div>

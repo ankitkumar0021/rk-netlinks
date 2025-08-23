@@ -40,33 +40,33 @@ const Locations = () => {
         </div>
         
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {offices.map((office, index) => (
+          {offices && offices?.length >=0 && offices?.map((office, index) => (
             <div 
               key={index} 
               className="common_border bg-gradient-to-b from-white to-blue-50 rounded-xl overflow-hidden hover:shadow-lg transition-all"
             >
               <div className="p-8">
-                <h3 className="text-2xl font-bold text-gray-800 mb-4">{office.city} Office</h3>
+                <h3 className="text-2xl font-bold text-gray-800 mb-4">{office?.city} Office</h3>
                 
                 <div className="space-y-4">
                   <div className="flex items-start">
                     <FiMapPin className="text-blue-600 mt-1 mr-3 flex-shrink-0" />
-                    <span className="text-gray-600">{office.address}</span>
+                    <span className="text-gray-600">{office?.address}</span>
                   </div>
                   
                   <div className="flex items-center">
                     <FiPhone className="text-blue-600 mr-3 flex-shrink-0" />
-                    <span className="text-gray-600">{office.phone}</span>
+                    <span className="text-gray-600">{office?.phone}</span>
                   </div>
                   
                   <div className="flex items-center">
                     <FiMail className="text-blue-600 mr-3 flex-shrink-0" />
-                    <span className="text-gray-600">{office.email}</span>
+                    <span className="text-gray-600">{office?.email}</span>
                   </div>
                   
                   <div className="flex items-center">
                     <FiClock className="text-blue-600 mr-3 flex-shrink-0" />
-                    <span className="text-gray-600">{office.hours}</span>
+                    <span className="text-gray-600">{office?.hours}</span>
                   </div>
                 </div>
                 
