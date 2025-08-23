@@ -19,7 +19,7 @@ const banners = [
 
 export default function MainBanner() {
   return (
-    <div className="relative main_banner bg_gradient">
+    <div className="relative main_banner bg_gradient mt-20">
       <div className="w-full">
         <button
           aria-label="Previous slide"

@@ -26,26 +26,26 @@ const SupportTeamRedesigned = () => {
           {supportOptions.map((opt) => (
             <motion.article key={opt.id} initial={{ opacity: 0, y: 18 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} whileHover={cardMotion.whileHover} transition={cardMotion.transition} className="relative">
 
-              <div className={`rounded-2xl p-1 bg-gradient-to-br ${opt.gradientFrom} ${opt.gradientTo} shadow-lg`}>
+              <div className={`rounded-2xl p-1 bg-gradient-to-br ${opt?.gradientFrom} ${opt?.gradientTo} shadow-lg`}>
                 <div className="bg-white/95 rounded-2xl p-6 h-56 flex flex-col justify-between">{/* fixed height for equal cards */}
 
                   <div className="flex items-start gap-4">
-                    <div className={`flex items-center justify-center w-14 h-14 rounded-lg bg-gradient-to-br ${opt.gradientFrom} ${opt.gradientTo} text-white shadow-md ring-1 ring-white/30`}>{opt.icon}</div>
+                    <div className={`flex items-center justify-center w-14 h-14 rounded-lg bg-gradient-to-br ${opt?.gradientFrom} ${opt?.gradientTo} text-white shadow-md ring-1 ring-white/30`}>{opt?.icon}</div>
                     <div>
-                      <h3 className="text-lg font-semibold text-gray-900">{opt.title}</h3>
-                      <p className="text-sm text-gray-600 mt-1">{opt.description}</p>
+                      <h3 className="text-lg font-semibold text-gray-900">{opt?.title}</h3>
+                      <p className="text-sm text-gray-600 mt-1">{opt?.description}</p>
                     </div>
                   </div>
 
                   <div className="flex items-center justify-between">
                     <div>
-                      <div className="text-sm font-medium text-gray-900">{opt.details}</div>
+                      <div className="text-sm font-medium text-gray-900">{opt?.details}</div>
                       <div className="text-xs text-gray-500">Available 24/7</div>
                     </div>
 
-                    <a href={opt.href} aria-label={opt.action} className="inline-flex items-center gap-2 bg-transparent px-4 py-2 rounded-md font-semibold text-white shadow-md border border-gray-200" style={{ backgroundImage: `linear-gradient(90deg, var(--tw-gradient-stops))` }}>
-                      <span className="sr-only">{opt.action}</span>
-                      <span className="px-3 py-2 rounded-md text-black  bg-white/6 backdrop-blur-sm text-sm">{opt.action}</span>
+                    <a href={opt?.href} aria-label={opt?.action} className="inline-flex items-center gap-2 bg-transparent px-4 py-2 rounded-md font-semibold text-white shadow-md border border-gray-200" style={{ backgroundImage: `linear-gradient(90deg, var(--tw-gradient-stops))` }}>
+                      <span className="sr-only">{opt?.action}</span>
+                      <span className="px-3 py-2 rounded-md text-black  bg-white/6 backdrop-blur-sm text-sm">{opt?.action}</span>
                       <HiArrowNarrowRight className="text-lg opacity-90" />
                     </a>
                   </div>

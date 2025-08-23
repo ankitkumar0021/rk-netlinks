@@ -93,9 +93,9 @@ const FeaturesNew = () => {
                       </div>
 
                       {/* static CTA */}
-                      <div>
+                      {/* <div>
                         <button className={`text-sm font-semibold px-4 py-2 rounded-lg shadow-lg border text-white ${palette.from} ${palette.to} hover:translate-y-[-2px] transition-transform`}>Get Started</button>
-                      </div>
+                      </div> */}
                     </div>
 
                   </div>
